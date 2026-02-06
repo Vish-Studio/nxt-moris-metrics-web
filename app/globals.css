@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Merriweather", serif;
+  --color-ocean: #0f172a;
+  --color-deep: #020617;
+  --color-surface: #1e293b;
+  --color-teal: #14b8a6;
+  --color-teal-light: #5eead4;
+  --color-slate: #94a3b8;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-ocean);
+    color: white;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--color-teal);
+    color: var(--color-ocean);
+  }
+
+  ::-moz-selection {
+    background-color: var(--color-teal);
+    color: var(--color-ocean);
+  }
+}
+
+@layer components {
+  .text-teal {
+    color: var(--color-teal);
+  }
+
+  .bg-teal {
+    background-color: var(--color-teal);
+  }
+
+  .border-teal {
+    border-color: var(--color-teal);
+  }
+
+  .text-slate {
+    color: var(--color-slate);
+  }
+
+  .bg-slate {
+    background-color: var(--color-slate);
+  }
+
+  .border-slate {
+    border-color: var(--color-slate);
+  }
+
+  .bg-ocean {
+    background-color: var(--color-ocean);
+  }
+
+  .text-ocean {
+    color: var(--color-ocean);
+  }
+
+  .bg-surface {
+    background-color: var(--color-surface);
+  }
+
+  .text-surface {
+    color: var(--color-surface);
+  }
+
+  .bg-deep {
+    background-color: var(--color-deep);
+  }
+
+  .text-deep {
+    color: var(--color-deep);
+  }
+
+  .text-teal-light {
+    color: var(--color-teal-light);
+  }
+
+  .bg-teal-light {
+    background-color: var(--color-teal-light);
+  }
+}
