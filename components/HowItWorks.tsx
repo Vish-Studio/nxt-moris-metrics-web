@@ -29,12 +29,12 @@ const HowItWorks: React.FC = () => {
     <section id="how-it-works" className="py-20 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          
+
           {/* Left: The Problem */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">Stop Drowning in Excel Sheets</h2>
+            <h2 className="text-3xl md:text-4xl font-sans font-bold mb-6">Stop Drowning in Excel Sheets</h2>
             <p className="text-lg text-slate mb-6">
-              Most business owners in Mauritius wait until the end of the month to know their profit. 
+              Most business owners in Mauritius wait until the end of the month to know their profit.
               Manual data entry leads to errors, wasted time, and a dangerous "Data Lag."
             </p>
             <ul className="space-y-4">
@@ -50,9 +50,9 @@ const HowItWorks: React.FC = () => {
           {/* Right: The Solution (Cards) */}
           <div className="grid grid-cols-1 gap-6">
             {solutions.map((sol, index) => (
-              <div 
-                key={index} 
-                className="bg-ocean p-6 rounded-xl border border-teal/20 hover:border-teal/50 transition duration-300 group"
+              <div
+                key={index}
+                className="bg-ocean p-6 rounded-xl border border-[rgba(20,184,166,0.2)] hover:border-[rgba(20,184,166,0.5)] transition group"
               >
                 <div className="h-12 w-12 bg-teal/10 rounded-lg flex items-center justify-center mb-4 text-teal group-hover:scale-110 transition-transform duration-300">
                   <i className={`fa-solid ${sol.icon} text-xl`}></i>
