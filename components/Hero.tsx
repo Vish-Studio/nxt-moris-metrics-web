@@ -24,13 +24,13 @@ const Hero: React.FC = () => {
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
           <a
             href="#contact"
-            className="bg-teal text-ocean px-8 py-4 rounded-lg font-bold text-lg hover:bg-tealLight transition duration-300 shadow-[0_0_20px_rgba(20,184,166,0.3)] text-center"
+            className="bg-teal text-ocean px-8 py-4 rounded-lg font-bold text-lg hover:bg-tealLight hover:shadow-[0_0_30px_rgba(20,184,166,0.5)] hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(20,184,166,0.3)] text-center"
           >
             Get Your Dashboard
           </a>
           <a
             href="#how-it-works"
-            className="bg-surface text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition border border-white/10 text-center"
+            className="bg-surface text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[rgba(255,255,255,0.08)] hover:border-[rgba(255,255,255,0.25)] hover:scale-105 transition-all duration-300 border border-[rgba(255,255,255,0.1)] text-center"
           >
             See How It Works
           </a>

@@ -7,14 +7,14 @@ const MissionVision: React.FC = () => {
         <h2 className="text-3xl md:text-4xl font-sans font-bold mb-12">Who We Are</h2>
 
         <div className="grid md:grid-cols-2 gap-10">
-          <div className="p-8 bg-surface rounded-2xl border border-[rgba(255,255,255,0.05)] transition duration-300">
+          <div className="p-8 bg-surface rounded-2xl border border-[rgba(255,255,255,0.05)] hover:border-[rgba(20,184,166,0.3)] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(20,184,166,0.08)] transition-all duration-300">
             <i className="fa-solid fa-rocket text-4xl text-teal mb-6"></i>
             <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
             <p className="text-slate">
               To democratize business intelligence for Mauritian SMEs. We believe every business owner deserves the same data tools as big corporations, without the complexity or cost.
             </p>
           </div>
-          <div className="p-8 bg-surface rounded-2xl border border-[rgba(255,255,255,0.05)] transition duration-300">
+          <div className="p-8 bg-surface rounded-2xl border border-[rgba(255,255,255,0.05)] hover:border-[rgba(20,184,166,0.3)] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(20,184,166,0.08)] transition-all duration-300">
             <i className="fa-solid fa-eye text-4xl text-teal mb-6"></i>
             <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
             <p className="text-slate">
@@ -23,7 +23,7 @@ const MissionVision: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-16 text-left bg-gradient-to-r from-surface to-ocean p-8 rounded-xl border border-[rgba(20,184,166,0.2)]">
+        <div className="mt-16 text-left bg-gradient-to-r from-surface to-ocean p-8 rounded-xl border border-[rgba(20,184,166,0.2)] hover:border-[rgba(20,184,166,0.4)] transition-all duration-300">
           <h3 className="text-xl font-bold text-white mb-2">About the Founders</h3>
           <p className="text-slate leading-relaxed">
             Founded by <strong>Keven Vithilinga</strong> and <strong>Vishroy Seenarain</strong>, MorisMetrics was born from a shared frustration. Having worked in corporate environments, we saw how powerful data could be—and how difficult it was for local SMEs to access it. We combined our expertise in Data Strategy and Software Development to build a tool that finally solves the "Excel Trap."

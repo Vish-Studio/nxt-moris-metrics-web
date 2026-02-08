@@ -24,18 +24,18 @@ const Navbar: React.FC = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
             {navLinks.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href} 
-                className="text-slate hover:text-teal transition"
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-[#94a3b8] hover:text-[#14b8a6] transition-colors duration-300"
               >
                 {link.name}
               </a>
             ))}
-            
+
             {/* Login Button */}
-            <a 
-              href="/login" 
+            <a
+              href="/login"
               className="bg-surface border border-teal text-teal hover:bg-teal hover:text-ocean px-5 py-2 rounded-full font-semibold transition duration-300 flex items-center"
             >
               <i className="fa-solid fa-lock mr-2"></i> Client Login
@@ -44,8 +44,8 @@ const Navbar: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button 
-              onClick={toggleMenu} 
+            <button
+              onClick={toggleMenu}
               className="text-white focus:outline-none p-2"
               aria-label="Toggle menu"
             >
@@ -69,8 +69,8 @@ const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
-            <a 
-              href="/login" 
+            <a
+              href="/login"
               className="block mt-4 mx-3 px-5 py-3 rounded-md text-center bg-teal text-ocean font-bold"
               onClick={() => setIsOpen(false)}
             >

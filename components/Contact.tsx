@@ -68,7 +68,7 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-ocean p-8 rounded-2xl border border-white/10 shadow-2xl">
+          <div className="bg-ocean p-8 rounded-2xl border border-[rgba(255,255,255,0.1)] shadow-2xl hover:border-[rgba(20,184,166,0.3)] hover:shadow-[0_20px_60px_rgba(20,184,166,0.1)] transition-all duration-300">
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 gap-6">
                 <div>

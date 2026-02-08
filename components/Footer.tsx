@@ -13,10 +13,10 @@ const Footer: React.FC = () => {
           {/* Connect with us + Social Icons */}
           <div className="flex items-center gap-4">
             <span className="text-slate text-sm">Connect with us</span>
-            <a href="#" className="w-10 h-10 rounded-full border border-[rgba(255,255,255,0.15)] flex items-center justify-center text-slate hover:text-teal hover:border-teal transition">
+            <a href="#" className="w-10 h-10 rounded-full border border-[rgba(255,255,255,0.15)] flex items-center justify-center text-slate hover:text-teal hover:border-teal hover:bg-[rgba(20,184,166,0.1)] hover:scale-110 transition-all duration-300">
               <i className="fa-brands fa-linkedin text-lg"></i>
             </a>
-            <a href="#" className="w-10 h-10 rounded-full border border-[rgba(255,255,255,0.15)] flex items-center justify-center text-slate hover:text-teal hover:border-teal transition">
+            <a href="#" className="w-10 h-10 rounded-full border border-[rgba(255,255,255,0.15)] flex items-center justify-center text-slate hover:text-teal hover:border-teal hover:bg-[rgba(20,184,166,0.1)] hover:scale-110 transition-all duration-300">
               <i className="fa-brands fa-facebook text-lg"></i>
             </a>
           </div>

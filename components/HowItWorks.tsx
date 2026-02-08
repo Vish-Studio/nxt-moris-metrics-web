@@ -52,7 +52,7 @@ const HowItWorks: React.FC = () => {
             {solutions.map((sol, index) => (
               <div
                 key={index}
-                className="bg-ocean p-6 rounded-xl border border-[rgba(20,184,166,0.2)] hover:border-[rgba(20,184,166,0.5)] transition group"
+                className="bg-ocean p-6 rounded-xl border border-[rgba(20,184,166,0.2)] hover:border-[rgba(20,184,166,0.5)] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(20,184,166,0.1)] transition-all duration-300 group"
               >
                 <div className="h-12 w-12 bg-teal/10 rounded-lg flex items-center justify-center mb-4 text-teal group-hover:scale-110 transition-transform duration-300">
                   <i className={`fa-solid ${sol.icon} text-xl`}></i>
