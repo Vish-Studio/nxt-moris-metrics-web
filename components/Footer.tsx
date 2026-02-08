@@ -27,8 +27,8 @@ const Footer: React.FC = () => {
 
         {/* Bottom Row: Copyright + Built by + Privacy */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-slate text-sm">
+          <p>Website by <a href="https://vish-studio.github.io/home/" target="_blank" rel="noopener noreferrer" className="text-teal font-bold hover:text-teal transition-colors duration-300">VISH Studio</a></p>
           <p>&copy; 2026 MorisMetrics. All rights reserved.</p>
-          <p>Built by <strong className="text-white">VISH Studio</strong></p>
           <a href="#" className="hover:text-teal transition">Privacy Policy</a>
         </div>
       </div>
