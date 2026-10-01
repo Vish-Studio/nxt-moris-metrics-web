@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
+import SectionTracker from '@/components/SectionTracker';
+import CookieConsent from '@/components/CookieConsent';
 
 export const metadata: Metadata = {
   title: 'MorisMetrics | Automated BI for Mauritian SMEs',
@@ -30,6 +33,9 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <CookieConsent />
+        <GoogleAnalytics />
+        <SectionTracker />
       </body>
     </html>
   );

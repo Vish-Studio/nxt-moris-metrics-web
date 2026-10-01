@@ -2,11 +2,15 @@
 
 import React, { useState } from 'react';
 import Logo from './Logo';
+import { trackEvent } from '@/lib/analytics';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => {
+    if (!isOpen) trackEvent('mobile_menu_open');
+    setIsOpen(!isOpen);
+  };
 
   const navLinks = [
     { name: 'How It Works', href: '#how-it-works' },
@@ -27,6 +31,7 @@ const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={() => trackEvent('nav_click', { label: link.name, device: 'desktop' })}
                 className="text-[#94a3b8] hover:text-[#14b8a6] transition-colors duration-300"
               >
                 {link.name}
@@ -36,6 +41,7 @@ const Navbar: React.FC = () => {
             {/* Login Button */}
             <a
               href="/login"
+              onClick={() => trackEvent('client_login_click', { device: 'desktop' })}
               className="bg-surface border border-teal text-teal hover:bg-teal hover:text-ocean px-5 py-2 rounded-full font-semibold transition duration-300 flex items-center"
             >
               <i className="fa-solid fa-lock mr-2"></i> Client Login
@@ -64,7 +70,10 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 href={link.href}
                 className="block px-3 py-2 rounded-md text-base font-medium text-slate hover:text-teal hover:bg-ocean"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  trackEvent('nav_click', { label: link.name, device: 'mobile' });
+                  setIsOpen(false);
+                }}
               >
                 {link.name}
               </a>
@@ -72,7 +81,10 @@ const Navbar: React.FC = () => {
             <a
               href="/login"
               className="block mt-4 mx-3 px-5 py-3 rounded-md text-center bg-teal text-ocean font-bold"
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                trackEvent('client_login_click', { device: 'mobile' });
+                setIsOpen(false);
+              }}
             >
               <i className="fa-solid fa-lock mr-2"></i> Client Login
             </a>

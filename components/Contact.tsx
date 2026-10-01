@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import { trackEvent } from '@/lib/analytics';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -12,12 +13,22 @@ const Contact: React.FC = () => {
     message: ''
   });
 
+  const formStarted = useRef(false);
+
+  const handleFocus = () => {
+    if (formStarted.current) return;
+    formStarted.current = true;
+    trackEvent('form_start', { form: 'contact' });
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Only non-identifying fields are sent to analytics.
+    trackEvent('generate_lead', { form: 'contact', current_system: formData.system });
     // Simulate form submission logic
     console.log('Form Submitted:', formData);
     alert('Thank you for your interest! We will contact you shortly.');
@@ -69,7 +80,7 @@ const Contact: React.FC = () => {
 
           {/* Contact Form */}
           <div className="bg-ocean p-8 rounded-2xl border border-[rgba(255,255,255,0.1)] shadow-2xl hover:border-[rgba(20,184,166,0.3)] hover:shadow-[0_20px_60px_rgba(20,184,166,0.1)] transition-all duration-300">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} onFocus={handleFocus}>
               <div className="grid grid-cols-1 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-slate mb-2" htmlFor="name">Full Name</label>
