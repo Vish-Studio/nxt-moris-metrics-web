@@ -1,3 +1,4 @@
+import TrackedLink from '@/components/TrackedLink';
 import React from 'react';
 
 const Hero: React.FC = () => {
@@ -22,18 +23,22 @@ const Hero: React.FC = () => {
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-          <a
+          <TrackedLink
+            eventName="cta_click"
+            eventParams={{ location: 'hero', label: 'get_dashboard' }}
             href="#contact"
             className="bg-teal text-ocean px-8 py-4 rounded-lg font-bold text-lg hover:bg-tealLight hover:shadow-[0_0_30px_rgba(20,184,166,0.5)] transition-all duration-300 shadow-[0_0_20px_rgba(20,184,166,0.3)] text-center"
           >
             Get Your Dashboard
-          </a>
-          <a
+          </TrackedLink>
+          <TrackedLink
+            eventName="cta_click"
+            eventParams={{ location: 'hero', label: 'see_how_it_works' }}
             href="#how-it-works"
             className="bg-surface text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[rgba(255,255,255,0.1)] hover:border-[rgba(255,255,255,0.25)] transition-all duration-300 border border-[rgba(255,255,255,0.1)] text-center"
           >
             See How It Works
-          </a>
+          </TrackedLink>
         </div>
       </div>
     </section>
